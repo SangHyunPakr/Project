@@ -40,6 +40,8 @@ public class StatusService extends Service {
 
     @Override
     public void onDestroy() {
+
+        unregisterReceiver(broadcastReceiver);
         super.onDestroy();
     }
 
@@ -50,15 +52,17 @@ public class StatusService extends Service {
 //        nManagerNoti=(NotificationManager)getSystemService(NOTIFICATION_SERVICE);
 
         try{
-            //Intent i=new Intent(getBaseContext(),BattInfoReceiver.class);
             intent=new Intent(getBaseContext(),StatusService.class);
-            //alarmPI=PendingIntent.getBroadcast(getBaseContext(),0,i,0);
             alarmPI=PendingIntent.getService(getBaseContext(),0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
             AlarmManager am = (AlarmManager)getSystemService(ALARM_SERVICE);
             // 비 정확성
             am.setInexactRepeating(AlarmManager.RTC, System.currentTimeMillis(), TIMER_PERIOD, alarmPI);
             // 정확성
             //am.setRepeating(AlarmManager.RTC, System.currentTimeMillis(), TIMER_PERIOD, alarmPI);
+
+            broadcastReceiver = new SMSReceiver();
+            returnRegisterIntent=registerReceiver(broadcastReceiver, filter);
+
         }catch (Exception e) {
             StringWriter sw = new StringWriter();
             e.printStackTrace(new PrintWriter(sw));
@@ -72,22 +76,25 @@ public class StatusService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         // TODO Auto-generated method stub
-        try{
-            if(IS_DEBUG)
-                Log.d(TAG,"command start service id="+startId);
+        //if(intent == null)
+        //{
+            try{
+                if(IS_DEBUG)
+                    Log.d(TAG,"command start service id="+startId);
 
-            broadcastReceiver = new SMSReceiver();
-            returnRegisterIntent=registerReceiver(broadcastReceiver, filter);
+                broadcastReceiver = new SMSReceiver();
+                returnRegisterIntent=registerReceiver(broadcastReceiver, filter);
 
-        }catch (Exception e) {
-            StringWriter sw = new StringWriter();
-            e.printStackTrace(new PrintWriter(sw));
+            }catch (Exception e) {
+                StringWriter sw = new StringWriter();
+                e.printStackTrace(new PrintWriter(sw));
 
-            if(IS_DEBUG){
-                String exceptionAsStrting = sw.toString();
-                Log.e("onStartCommand", exceptionAsStrting);
+                if(IS_DEBUG){
+                    String exceptionAsStrting = sw.toString();
+                    Log.e("onStartCommand", exceptionAsStrting);
+                }
             }
-        }
+        //}
         //return super.onStartCommand(intent, flags, startId);
         return START_STICKY;				//null 인텐트로 onStartCommand()호출	//갤스
         //return START_NOT_STICKY;			//stop service

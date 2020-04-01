@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.telephony.SmsMessage;
@@ -24,21 +26,33 @@ public class SMSReceiver extends BroadcastReceiver{
     static final String ACTION = "android.provider.Telephony.SMS_RECEIVED";
     private PropertyUtil property;
 
+    private BroadcastReceiver sendBroadcastReceiver;
+    private BroadcastReceiver deliveryBroadcastReceiver;
+    String SENT = "SMS_SENT";
+    String DELIVERED = "SMS_DELIVERED";
+
+    /*
     Context con = ((MainActivity)MainActivity.context_main);
 
     public String ReadPhoneNumber(){
         String num = "010";
-        SharedPreferences pref = con.getSharedPreferences("pref", Activity.MODE_PRIVATE);
+        SharedPreferences pref = getSharedPreferences("pref", Activity.MODE_PRIVATE);
         if((pref != null) && (pref.contains("phone"))){
             num = pref.getString("phone","010");
         }
+
+        registerReceiver(deliveryBroadcastReceiver, new IntentFilter(DELIVERED));
+        registerReceiver(sendBroadcastReceiver , new IntentFilter(SENT));
+
         return num;
     }
+     */
     @Override
     public void onReceive(Context context, Intent intent) {
+        Bundle bundle = intent.getExtras();
         if (intent.getAction().equals(ACTION)) {
             //Bundel 널 체크
-            Bundle bundle = intent.getExtras();
+            bundle = intent.getExtras();
             if (bundle == null) {
                 return;
             }
@@ -52,7 +66,16 @@ public class SMSReceiver extends BroadcastReceiver{
             //message 처리
             SmsMessage[] smsMessages = new SmsMessage[pdusObj.length];
             for (int i = 0; i < pdusObj.length; i++) {
-                smsMessages[i] = SmsMessage.createFromPdu((byte[]) pdusObj[i]);
+                // new version
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    String format = bundle.getString("format");
+                    smsMessages[i] = SmsMessage.createFromPdu((byte[]) pdusObj[i], format);
+                }
+                else {
+                    smsMessages[i] = SmsMessage.createFromPdu((byte[]) pdusObj[i]);
+                }
+                // old version
+                //smsMessages[i] = SmsMessage.createFromPdu((byte[]) pdusObj[i]);
                 Log.d(logTag, "NEW SMS " + i + "th");
                 Log.d(logTag, "DisplayOriginatingAddress : "
                         + smsMessages[i].getDisplayOriginatingAddress());
@@ -87,9 +110,11 @@ public class SMSReceiver extends BroadcastReceiver{
                 final SmsManager sms = SmsManager.getDefault();
                 //property = new PropertyUtil();
 
-                String strPhone = ReadPhoneNumber();
+                String strPhone = "01054893518";//ReadPhoneNumber();
+
                 sms.sendTextMessage(strPhone,null,strSMS,null,null);
             }
         }
     }
+
 }
