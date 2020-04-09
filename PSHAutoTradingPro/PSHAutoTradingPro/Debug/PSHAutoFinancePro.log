@@ -1,0 +1,54 @@
+﻿  stdafx.cpp
+  BCMenu.cpp
+f:\pshautofinancepro\util\bcmenu.cpp(74): warning C4996: 'GetVersion': deprecated로 선언되었습니다.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\um\sysinfoapi.h(135): note: 'GetVersion' 선언을 참조하십시오.
+f:\pshautofinancepro\util\bcmenu.cpp(81): warning C4996: 'GetVersionExW': deprecated로 선언되었습니다.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\um\sysinfoapi.h(387): note: 'GetVersionExW' 선언을 참조하십시오.
+f:\pshautofinancepro\util\bcmenu.cpp(96): warning C4996: 'GetVersionExW': deprecated로 선언되었습니다.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\um\sysinfoapi.h(387): note: 'GetVersionExW' 선언을 참조하십시오.
+f:\pshautofinancepro\util\bcmenu.cpp(207): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\corecrt_wstring.h(123): note: 'wcscpy' 선언을 참조하십시오.
+f:\pshautofinancepro\util\bcmenu.cpp(1648): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\corecrt_wstring.h(123): note: 'wcscpy' 선언을 참조하십시오.
+f:\pshautofinancepro\util\bcmenu.cpp(1928): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  BkDialogST.cpp
+  BtnST.cpp
+f:\pshautofinancepro\util\btnst.cpp(21): warning C4005: 'BS_TYPEMASK': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\um\winuser.h(11003): note: 'BS_TYPEMASK'의 이전 정의를 참조하십시오.
+  ColorStatic.cpp
+  DateUtil.cpp
+  DeviceData.cpp
+  DialogUtil.cpp
+  FileSystemUtil.cpp
+  FontManager.cpp
+  ianalogdisplayx.cpp
+  ianalogoutputx.cpp
+  iEditX.cpp
+  iledrectanglex1.cpp
+  ilineargaugex1.cpp
+  iPipeX.cpp
+  irotationdisplayx1.cpp
+  iswitchledx8.cpp
+  iValveX.cpp
+  Logging.cpp
+  MinidumpHelp.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  ScrollWindow.cpp
+f:\pshautofinancepro\util\scrollwindow.cpp(61): warning C4996: 'GetVersion': deprecated로 선언되었습니다.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\um\sysinfoapi.h(135): note: 'GetVersion' 선언을 참조하십시오.
+f:\pshautofinancepro\util\scrollwindow.cpp(100): warning C4996: 'GetVersion': deprecated로 선언되었습니다.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\um\sysinfoapi.h(135): note: 'GetVersion' 선언을 참조하십시오.
+  StringUtil.cpp
+  Thread.cpp
+  DlgBottom.cpp
+  DlgMain01.cpp
+  DlgMain02.cpp
+  DlgRight01.cpp
+  DlgTop.cpp
+  MainFrm.cpp
+  PSHAutoFinancePro.cpp
+  PSHAutoFinanceProDoc.cpp
+  PSHAutoFinanceProView.cpp
+  코드를 생성하고 있습니다...
+  PSHAutoFinancePro.vcxproj -> F:\PSHAutoFinancePro\Debug\PSHAutoFinancePro.exe

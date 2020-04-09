@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{22604881-4281-4194-92e6-1dfb79d8ff14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Dialog">
+      <UniqueIdentifier>{90083232-7817-4977-8891-0cde039f2ad5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\File">
+      <UniqueIdentifier>{6e8b9012-ec81-4724-b02e-c8563f75e96b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Log">
+      <UniqueIdentifier>{9fb9ada6-a46d-473a-b55b-e265af6cfeb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\String">
+      <UniqueIdentifier>{3aa5168d-ca41-4bec-83e0-3e3fd9fc5b1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Thread">
+      <UniqueIdentifier>{4de86939-6656-4569-8bb1-f2cd0955a954}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Data">
+      <UniqueIdentifier>{dcc4c1b9-f628-4f5e-9b64-c5364809d68a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Date">
+      <UniqueIdentifier>{a2a53972-09f4-4387-b068-27bed32c3ca6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Dump">
+      <UniqueIdentifier>{13894d62-084c-4038-b9da-20b3349fd1cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\DB">
+      <UniqueIdentifier>{7624ff40-eeff-4af3-b123-8c747295f221}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\SQLite3">
+      <UniqueIdentifier>{8d7d3d95-3318-4ea7-bc1a-17f729097896}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\GridCtrl">
+      <UniqueIdentifier>{6a87b4ba-40b3-4d75-a54a-cc82f7b4ceb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenAPI">
+      <UniqueIdentifier>{ab494905-e03a-4f8c-8048-e28056e70de2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\MemoryUtil.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\BCMenu.h">
+      <Filter>Util\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\BkDialogST.h">
+      <Filter>Util\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\BtnST.h">
+      <Filter>Util\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\Color.h">
+      <Filter>Util\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\DialogUtil.h">
+      <Filter>Util\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\FontManager.h">
+      <Filter>Util\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\ScrollWindow.h">
+      <Filter>Util\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\ColorStatic.h">
+      <Filter>Util\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\DateUtil.h">
+      <Filter>Util\Date</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\DeviceData.h">
+      <Filter>Util\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\Thread.h">
+      <Filter>Util\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\StringUtil.h">
+      <Filter>Util\String</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\Logging.h">
+      <Filter>Util\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\FileSystemUtil.h">
+      <Filter>Util\File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\MinidumpHelp.h">
+      <Filter>Util\Dump</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\SyncObject.h">
+      <Filter>Util\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgBottom.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgRight01.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgTop.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PSHAutoTradingPro.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PSHAutoTradingProDoc.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PSHAutoTradingProView.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgMain01_01.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgMain02_01.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgMain02_02.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgMain01_02.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\GridCtrl\CellRange.h">
+      <Filter>Util\GridCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\GridCtrl\GridCell.h">
+      <Filter>Util\GridCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\GridCtrl\GridCellBase.h">
+      <Filter>Util\GridCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\GridCtrl\GridCtrl.h">
+      <Filter>Util\GridCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\GridCtrl\GridDropTarget.h">
+      <Filter>Util\GridCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\GridCtrl\InPlaceEdit.h">
+      <Filter>Util\GridCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\GridCtrl\MemDC.h">
+      <Filter>Util\GridCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util\GridCtrl\TitleTip.h">
+      <Filter>Util\GridCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgCurrentPricePopup.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgInterestListPopup.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgOrderPopup.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenAPI\KHOpenAPICtrl.h">
+      <Filter>OpenAPI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\BCMenu.cpp">
+      <Filter>Util\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\BkDialogST.cpp">
+      <Filter>Util\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\BtnST.cpp">
+      <Filter>Util\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\DialogUtil.cpp">
+      <Filter>Util\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\FontManager.cpp">
+      <Filter>Util\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\ScrollWindow.cpp">
+      <Filter>Util\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\ColorStatic.cpp">
+      <Filter>Util\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\DateUtil.cpp">
+      <Filter>Util\Date</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\DeviceData.cpp">
+      <Filter>Util\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\Thread.cpp">
+      <Filter>Util\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\StringUtil.cpp">
+      <Filter>Util\String</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\Logging.cpp">
+      <Filter>Util\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\FileSystemUtil.cpp">
+      <Filter>Util\File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\MinidumpHelp.cpp">
+      <Filter>Util\Dump</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgBottom.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgRight01.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgTop.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PSHAutoTradingPro.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PSHAutoTradingProDoc.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PSHAutoTradingProView.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgMain01_01.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgMain02_01.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgMain02_02.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgMain01_02.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\GridCtrl\GridCell.cpp">
+      <Filter>Util\GridCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\GridCtrl\GridCellBase.cpp">
+      <Filter>Util\GridCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\GridCtrl\GridCtrl.cpp">
+      <Filter>Util\GridCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\GridCtrl\GridDropTarget.cpp">
+      <Filter>Util\GridCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\GridCtrl\InPlaceEdit.cpp">
+      <Filter>Util\GridCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Util\GridCtrl\TitleTip.cpp">
+      <Filter>Util\GridCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgCurrentPricePopup.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgInterestListPopup.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgOrderPopup.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenAPI\KHOpenAPICtrl.cpp">
+      <Filter>OpenAPI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\GUI_IMAGE\IMAGE_BUTTON\IMAGE_BUTTON_NAVIGATION_EXIT_ON.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\GUI_IMAGE\IMAGE_PLATFORM\IMAGE_PLATFORM_BOTTOM.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\GUI_IMAGE\IMAGE_PLATFORM\IMAGE_PLATFORM_COMMAND.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\GUI_IMAGE\IMAGE_PLATFORM\IMAGE_PLATFORM_INFORMATION.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\GUI_IMAGE\IMAGE_PLATFORM\IMAGE_PLATFORM_LOGO.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\GUI_IMAGE\IMAGE_PLATFORM\IMAGE_PLATFORM_STATUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\GUI_IMAGE\IMAGE_PLATFORM\PLATFORM_TOP.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\GUI_IMAGE\IMAGE_PLATFORM\IMAGE_PLATFORM_TOP.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\PSHAutoTradingPro.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\PSHAutoTradingProDoc.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PSHAutoTradingPro.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\PSHAutoTradingPro.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+</Project>
